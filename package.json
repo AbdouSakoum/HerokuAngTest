@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot -prod",
+    "preinstall": "npm install -g @angular/cli",
+    "postinstall": "ng build --output-path client-app-one --aot --prod",
     "heroku-postbuild": "ng build --prod"
   },
   "private": true,
