@@ -1,0 +1,91 @@
+
+ <div class="main">
+    <div class="col-md-8 col-sm-12" >
+       
+       <div>
+          <!--formulaire-->
+          <form [formGroup]="form" (ngSubmit)="submit()" >
+               <div class="form-group">
+                  <label for="patientCode" >Code de validation</label>
+                  <input 
+                      formControlName="patientCode"
+                      id="patientCode"
+                      type="text"
+                      class="form-control" 
+                      autocomplete="off"
+                      placeholder="code de validation">
+             </div>
+             <div class="form-group">
+               <label for="prenom">Prénom du parent</label>
+               <input
+                   formControlName="prenom"
+                   id="prenom"
+                   type="text" 
+                   class="form-control" 
+                   autocomplete="off"
+                   placeholder="prenom de patient">
+            </div>
+             <div class="form-group">
+                  <label for="nom">Nom du parent</label>
+                  <input
+                      formControlName="nom"
+                      id="nom"
+                      type="text" 
+                      class="form-control" 
+                      autocomplete="off"
+                      placeholder="nom de patient">
+            </div>
+            <div class="form-group">
+               <input
+                   formControlName="phone"
+                   id="phone"
+                   type="tel" 
+                   class="form-control" 
+                   autocomplete="off"
+                   ng2TelInput >
+            </div>
+            <div class="form-group">
+               <label for="langue">langue du programme</label>
+               <select type="text" class="form-control" formControlName="langue" id="langue" >
+                  <option>Arabe</option>
+                  <option>Français</option>
+                  <option>Anglais</option>
+               </select>
+               <small id="emailHelp" class="form-text text-muted">la langue dans laquelle le spécialiste va communiquer avec vous.</small>
+            </div>
+            <div class="form-group">
+               <label for="email">Adresse mail</label>
+               <input
+                   formControlName="email"
+                   id="email"
+                   type="text" 
+                   class="form-control" 
+                   autocomplete="off"
+                   placeholder="name@example.com">
+            </div>
+            <div class="form-group">
+               <label for="password">Mots de passe</label>
+               <input
+                   formControlName="password"
+                   id="password"
+                   type="password" 
+                   class="form-control" 
+                   autocomplete="off"
+                   placeholder="mot de passe de patient">
+            </div>
+             <button type="submit" class="btn btn-primary  btn-block" >Valider</button>
+             <!--<button type="submit" class="btn btn-black">Register</button>-->
+          </form>
+          <br>         
+             <a mdbBtn color="white" routerLink="/login" outline="true" class="wow fadeInLeft waves-light" data-wow-delay="0.3s"
+            mdbWavesEffect>si vous avez déja un compte</a>
+       </div>
+    </div>
+ </div>
+ <div class="sidenav">
+   <app-navbar></app-navbar>
+   <div class="login-main-text">
+      <h2>Application<br> Login Page</h2>
+      <p>Login or register from here to access.</p>
+   </div>
+</div>

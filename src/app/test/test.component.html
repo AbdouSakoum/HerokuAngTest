@@ -1,0 +1,51 @@
+<button (click)="open()">open</button>
+
+<div class="overlay" *ngIf="popupSadModal">
+    <div class="popup">
+        <div class="content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" (click)="close()">
+          </button>
+        </div>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="formDetail" (ngSubmit)="onSubmit()" >  
+            <br>   
+            <div class="mb-3">
+              <label for="first" class="form-label">First</label>
+              <select type="number" class="form-control" formControlName="first" id="first" >
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+            </div>
+             <br>
+             <div class="mb-3">
+              <label for="third" class="form-label">second</label>
+              <select type="number" class="form-control" formControlName="second" id="second" >
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+            </div>
+             <br>
+             <div class="mb-3">
+              <label for="third" class="form-label">third</label>
+              <select type="number" 
+                      class="form-control" 
+                      formControlName="third" 
+                      id="third" >
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+            </div>
+             <br>
+             <button type="submit" class="btn btn-primary">Valider</button>
+           </form>
+      
+      </div>
+  
+  </div>
+  </div>
+  
