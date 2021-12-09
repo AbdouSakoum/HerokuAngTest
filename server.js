@@ -1,4 +1,19 @@
-const express = require('express');
+const express = require('express');  
+const path = require('path');  
+  
+const ngApp = express();  
+  
+ngApp.use(express.static('./dist/client-app-one'));  
+  
+ngApp.get('/*', function (request, response) {  
+    response.sendFile(path.join(__dirname, '/dist/client-app-one/index.html'));  
+});  
+  
+ngApp.listen(process.env.PORT || 8080); 
+
+
+
+/*const express = require('express');
 const app = express();
 const path = require('path');
 const port = process.env.PORT || 4200;
@@ -18,7 +33,7 @@ res.sendFile(path.join(__dirname+'/client-app-one/index.html'));
 
 server.listen(port, function () {
     console.log("App running on port " + port);
-})
+})*/
 
 
 
